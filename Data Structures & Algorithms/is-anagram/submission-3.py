@@ -1,0 +1,18 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        s_freq=collections.defaultdict(int)
+        t_freq=collections.defaultdict(int)
+
+        if len(s)!=len(t):
+            return False
+        
+        for i in range(len(s)):
+            s_freq[s[i]]+=1
+            t_freq[t[i]]+=1
+
+        if s_freq == t_freq:
+            return True
+        else:
+            return False
+
+        
